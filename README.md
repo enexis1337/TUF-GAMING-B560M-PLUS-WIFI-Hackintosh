@@ -5,6 +5,7 @@
 opencore config based on this [repository](https://github.com/DirieSoftie/TUF-GAMING-B560M-PLUS-WIFI-Hackintosh), with some tweaks for my system
 
 # Info
+* Big Sur
 * OpenCore 0.8.2
 * ASUS TUF Gaming B560M-Plus WiFi
 * Processor: i5 11400F (11-gen)
@@ -15,11 +16,9 @@ What's working:
 
 * it boots 
 * dual display is working with some issues
-* accelerated graphics with [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/)(rocket lake iGPU not supported)
 * sound works
 * on board ethernet works
 * all USB ports work
-* sleep works
 * WiFi works
 * iServices
   * iMessage
@@ -32,6 +31,8 @@ What's *NOT* working:
 * AppleTV+ Playback (too lazy to fix)
 * Bluetooth
 * AirDrop/Handoff
+* accelerated graphics with [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/)(rocket lake iGPU not supported)
+* sleep
 
 # Issues:
 

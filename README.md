@@ -5,6 +5,7 @@
 opencore config based on this [repository](https://github.com/DirieSoftie/TUF-GAMING-B560M-PLUS-WIFI-Hackintosh), with some tweaks for my system
 
 # Info
+* Monterey
 * OpenCore 0.8.2
 * ASUS TUF Gaming B560M-Plus WiFi
 * Processor: i5 11400F (11-gen)
@@ -32,11 +33,6 @@ What's *NOT* working:
 * AppleTV+ Playback (too lazy to fix)
 * Bluetooth
 * AirDrop/Handoff
-
-# Issues:
-
-* Won't boot with 2 displays connected. I have no idea why this happens, dual displays works fine if I plug it in after booting. If anyone has a fix please let me know.
-* Monterey boots but has problems. (need more testing and troubleshooting)
 
 # Credit:
 

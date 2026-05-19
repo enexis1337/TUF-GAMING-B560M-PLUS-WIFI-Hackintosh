@@ -34,11 +34,6 @@ What's *NOT* working:
 * accelerated graphics with [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/)(rocket lake iGPU not supported)
 * sleep
 
-# Issues:
-
-* Won't boot with 2 displays connected. I have no idea why this happens, dual displays works fine if I plug it in after booting. If anyone has a fix please let me know.
-* Monterey boots but has problems. (need more testing and troubleshooting)
-
 # Credit:
 
 * [OpenCore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher/)

@@ -1,0 +1,71 @@
+panic(cpu 8 caller 0xffffff80163cc483): Kernel trap at 0xffffff8016a04143, type 14=page fault, registers:
+CR0: 0x0000000080010033, CR2: 0x0000000000400019, CR3: 0x0000000245dd0011, CR4: 0x00000000003626e0
+RAX: 0xffffff94f2034140, RBX: 0x0000000000400001, RCX: 0x0000000000000000, RDX: 0x0000000000420000
+RSP: 0xffffffad538bbc70, RBP: 0xffffffad538bbc80, RSI: 0xffffff99beeea6c0, RDI: 0x0000000000400001
+R8:  0x0000000000000016, R9:  0x0000000000000002, R10: 0xffffff94f257baa0, R11: 0xffffff8016be1abc
+R12: 0xffffff80172a9f28, R13: 0x00000000e00002e2, R14: 0xffffff94ee7c6540, R15: 0xffffffa02516e7fc
+RFL: 0x0000000000010246, RIP: 0xffffff8016a04143, CS:  0x0000000000000008, SS:  0x0000000000000010
+Fault CR2: 0x0000000000400019, Error code: 0x0000000000000000, Fault CPU: 0x8, PL: 0, VF: 1
+
+Panicked task 0xffffff8b590cdd10: 3 threads: pid 89: systemstats
+Backtrace (CPU 8), panicked thread: 0xffffff94ee7c6540, Frame : Return Address
+0xffffffad538bb620 : 0xffffff8016279a3d mach_kernel : _handle_debugger_trap + 0x41d
+0xffffffad538bb670 : 0xffffff80163dcd26 mach_kernel : _kdp_i386_trap + 0x116
+0xffffffad538bb6b0 : 0xffffff80163cc093 mach_kernel : _kernel_trap + 0x4d3
+0xffffffad538bb700 : 0xffffff8016219a90 mach_kernel : _return_from_trap + 0xe0
+0xffffffad538bb720 : 0xffffff8016279e0d mach_kernel : _DebuggerTrapWithState + 0xad
+0xffffffad538bb840 : 0xffffff80162795c6 mach_kernel : _panic_trap_to_debugger + 0x2b6
+0xffffffad538bb8a0 : 0xffffff8016b14a73 mach_kernel : _panic + 0x84
+0xffffffad538bb990 : 0xffffff80163cc483 mach_kernel : _sync_iss_to_iks + 0x2c3
+0xffffffad538bbb10 : 0xffffff80163cc166 mach_kernel : _kernel_trap + 0x5a6
+0xffffffad538bbb60 : 0xffffff8016219a90 mach_kernel : _return_from_trap + 0xe0
+0xffffffad538bbb80 : 0xffffff8016a04143 mach_kernel : _IORecursiveLockLock + 0x13
+0xffffffad538bbc80 : 0xffffff8018e32bc6 com.apple.iokit.IOPCIFamily : __ZNK11IOPCIDevice11getPropertyEPK8OSSymbol + 0x5e
+0xffffffad538bbcc0 : 0xffffff8016a09c14 mach_kernel : __ZNK15IORegistryEntry11getPropertyEPKc + 0x24
+0xffffffad538bbce0 : 0xffffff8016a0a12f mach_kernel : __ZNK15IORegistryEntry12copyPropertyEPKc + 0x4f
+0xffffffad538bbd10 : 0xffffff8016a80d81 mach_kernel : _is_io_registry_entry_get_property_bin_buf + 0x131
+0xffffffad538bbd80 : 0xffffff8016384fe7 mach_kernel : _iokit_server_routine + 0x74f7
+0xffffffad538bbdd0 : 0xffffff80162544cb mach_kernel : _ipc_kmsg_send + 0x46b
+0xffffffad538bbe60 : 0xffffff801626ae49 mach_kernel : _mach_msg_overwrite_trap + 0x2c9
+0xffffffad538bbef0 : 0xffffff80163aed5a mach_kernel : _mach_call_munger64 + 0x1ea
+0xffffffad538bbfa0 : 0xffffff801621a276 mach_kernel : _hndl_mach_scall64 + 0x16
+      Kernel Extensions in backtrace:
+         com.apple.iokit.IOPCIFamily(2.9)[9B40C2BD-55D8-3572-912C-A55E1B34C673]@0xffffff8018e23000->0xffffff8018e4ffff
+
+Process name corresponding to current thread (0xffffff94ee7c6540): systemstats
+Boot args: -v keepsyms=1 alcid=66 amfi_get_out_of_my_way=0x1 ngfxgl=1 ngfxcompat=1
+
+Mac OS version:
+21H1320
+
+Kernel version:
+Darwin Kernel Version 21.6.0: Mon Jun 24 00:56:10 PDT 2024; root:xnu-8020.240.18.709.2~1/RELEASE_X86_64
+Kernel UUID: AAF3C70C-3331-335A-96FB-D338CFE178F0
+KernelCache slide: 0x0000000016000000
+KernelCache base:  0xffffff8016200000
+Kernel slide:      0x0000000016010000
+Kernel text base:  0xffffff8016210000
+__HIB  text base: 0xffffff8016100000
+System model name: MacPro7,1 (Mac-27AD2F918AE68F61)
+System shutdown begun: NO
+Panic diags file available: YES (0x0)
+Hibernation exit count: 0
+
+System uptime in nanoseconds: 616976518977
+Last Sleep:           absolute           base_tsc          base_nano
+  Uptime  : 0x0000008fa6aa941c
+  Sleep   : 0x0000000000000000 0x0000000000000000 0x0000000000000000
+  Wake    : 0x0000000000000000 0x0000000a4b27caab 0x0000000000000000
+Compressor Info: 0% of compressed pages limit (OK) and 0% of segments limit (OK) with 0 swapfiles and OK swap space
+Zone info:
+  Zone map: 0xffffff80252dd000 - 0xffffffa0252dd000
+  . PGZ   : 0xffffff80252dd000 - 0xffffff80262de000
+  . VM    : 0xffffff80262de000 - 0xffffff84f2d44000
+  . RO    : 0xffffff84f2d44000 - 0xffffff868c610000
+  . GEN0  : 0xffffff868c610000 - 0xffffff8b59076000
+  . GEN1  : 0xffffff8b59076000 - 0xffffff9025adc000
+  . GEN2  : 0xffffff9025adc000 - 0xffffff94f2542000
+  . GEN3  : 0xffffff94f2542000 - 0xffffff99befa9000
+  . DATA  : 0xffffff99befa9000 - 0xffffffa0252dd000
+  Metadata: 0xffffffcad814f000 - 0xffffffcaf814f000
+  Bitmaps : 0xffffffcaf814f000 - 0xffffffcafb14f000
